@@ -1,8 +1,6 @@
 #include "Useful_Macro.h"
 #include "IncludeFile.h"
 
-#include <stdio.h>
-
 int fib(int n)
 {
 #pragma omp critical

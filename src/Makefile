@@ -36,6 +36,9 @@ Child_Task_Taskwait : Child_Task_Taskwait.o
 fib : fib.o
 	$(CXX) -std=$(CXX_STANDATD) fib.o -L. $(LDFLAGS) $(DEBUGGING) -o fib.exe $(LDFALGS) 
 
+TaskLoop_TaskGroup: TaskLoop_TaskGroup.o 
+	$(CXX) -std=$(CXX_STANDATD) TaskLoop_TaskGroup.o -L. $(LDFLAGS) $(DEBUGGING) -o TaskLoop_TaskGroup.exe $(LDFALGS)
+
 OpenTask_HelloWorld.o: 00-OpenTask_HelloWorld.cpp 
 	$(CXX) $(CXXFLAGS)  -c -o OpenTask_HelloWorld.o 00-OpenTask_HelloWorld.cpp 
 
@@ -50,6 +53,9 @@ Child_Task_Taskwait.o : 03-Child_Task_Taskwait.cpp
 
 fib.o : 04-fib.cpp
 	$(CXX) $(CXXFLAGS)  -c -o fib.o 04-fib.cpp
+
+TaskLoop_TaskGroup.o: 05-TaskLoop_TaskGroup.cpp 
+	$(CXX) $(CXXFLAGS)  -c -o TaskLoop_TaskGroup.o 05-TaskLoop_TaskGroup.cpp
 
 clean:
 	rm *.o
